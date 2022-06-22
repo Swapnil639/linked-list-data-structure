@@ -44,6 +44,16 @@ public class LinkedListFunctions {
         }
         System.out.println("Null");
     }
+    public void appendingNode(int before, int data) {
+        Node currentNode = head;
+        while (currentNode.data != before) {
+            currentNode = currentNode.next;
+        }
+        Node node = new Node(data);
+        node.next = currentNode.next;
+        currentNode.next = node;
+
+    }
     public void insertInBetween(int before, int after, int data) {
         Node currentNode = head;
         while (currentNode.data != before && currentNode.data != after) {
