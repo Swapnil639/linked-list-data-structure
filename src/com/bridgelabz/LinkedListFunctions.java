@@ -54,4 +54,13 @@ public class LinkedListFunctions {
         currentNode.next = node;
 
     }
+    public void insertInBetween(int before, int after, int data) {
+        Node currentNode = head;
+        while (currentNode.data != before && currentNode.data != after) {
+            currentNode = currentNode.next;
+        }
+        Node node = new Node(data);
+        node.next = currentNode.next;
+        currentNode.next = node;
+    }
 }
