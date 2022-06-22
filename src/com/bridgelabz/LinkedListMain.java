@@ -17,8 +17,7 @@ public class LinkedListMain {
         linkedListFunctions.addLast(70);
         linkedListFunctions.insertInBetween(56, 70, 30);
         linkedListFunctions.printList();
-        linkedListFunctions.deleteLast();
-        linkedListFunctions.printList();
+        linkedListFunctions.findNode(30);
     }
 }
 
