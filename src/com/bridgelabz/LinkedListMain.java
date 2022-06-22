@@ -10,5 +10,13 @@ public class LinkedListMain {
         list.add(30);
         list.add(70);
         System.out.println("Simple Linked list is : " + list);
+
+        LinkedListFunctions linkedListFunctions = new LinkedListFunctions();
+        System.out.println("Elements added in the list are:");
+        linkedListFunctions.addFirst(70);
+        linkedListFunctions.addFirst(30);
+        linkedListFunctions.addFirst(56);
+        linkedListFunctions.printList();
     }
 }
+
