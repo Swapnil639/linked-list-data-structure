@@ -13,9 +13,9 @@ public class LinkedListMain {
 
         LinkedListFunctions linkedListFunctions = new LinkedListFunctions();
         System.out.println("Elements added in the list are:");
-        linkedListFunctions.addFirst(70);
-        linkedListFunctions.addFirst(30);
         linkedListFunctions.addFirst(56);
+        linkedListFunctions.appendingNode(56, 30);
+        linkedListFunctions.appendingNode(30, 70);
         linkedListFunctions.printList();
     }
 }
