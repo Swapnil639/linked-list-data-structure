@@ -27,7 +27,9 @@ public class LinkedListMain {
         System.out.println("Element 40 deleted from the list");
         linkedListFunctions.deleteAnyNode(40);
         linkedListFunctions.printList();
-
+        System.out.println("List is in ascending order ");
+        linkedListFunctions.ascendingOrder();
+        linkedListFunctions.printList();
     }
 }
 

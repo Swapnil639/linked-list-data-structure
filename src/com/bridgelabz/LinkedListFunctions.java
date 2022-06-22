@@ -13,6 +13,7 @@ public class LinkedListFunctions {
         newNode.next = head;
         head = newNode;
     }
+
     //add last
     public void addLast(int data) {
         Node newNode = new Node(data);
@@ -44,6 +45,7 @@ public class LinkedListFunctions {
         }
         System.out.println("Null");
     }
+
     public void appendingNode(int before, int data) {
         Node currentNode = head;
         while (currentNode.data != before) {
@@ -54,6 +56,7 @@ public class LinkedListFunctions {
         currentNode.next = node;
 
     }
+
     public void insertInBetween(int before, int after, int data) {
         Node currentNode = head;
         while (currentNode.data != before && currentNode.data != after) {
@@ -63,32 +66,35 @@ public class LinkedListFunctions {
         node.next = currentNode.next;
         currentNode.next = node;
     }
+
     //delete first
-    public void deleteFirst(){
-        if(head==null){
+    public void deleteFirst() {
+        if (head == null) {
             System.out.println("The list is empty");
             return;
         }
         head = head.next;
     }
+
     // delete last
-    public void deleteLast(){
-        if(head==null){
+    public void deleteLast() {
+        if (head == null) {
             System.out.println("The list is empty");
             return;
         }
-        if(head.next==null){
-            head=null;
+        if (head.next == null) {
+            head = null;
             return;
         }
-        Node secondLast=head;
-        Node lastNode=head.next;
-        while(lastNode.next !=null){
+        Node secondLast = head;
+        Node lastNode = head.next;
+        while (lastNode.next != null) {
             lastNode = lastNode.next;
             secondLast = secondLast.next;
         }
-        secondLast.next=null;
+        secondLast.next = null;
     }
+
     public void findNode(int data) {
         Node currentNode = head;
         while (currentNode != null) {
@@ -98,6 +104,7 @@ public class LinkedListFunctions {
             currentNode = currentNode.next;
         }
     }
+
     public void deleteAnyNode(int data) {
         Node currentNode = head, previousNode = head;
         while (currentNode != null) {
@@ -106,6 +113,25 @@ public class LinkedListFunctions {
             }
             previousNode = currentNode;
             currentNode = currentNode.next;
+        }
+    }
+
+    public void ascendingOrder() {
+        Node currentNode = head, index;
+        if (currentNode == null) {
+            System.out.println("List is empty");
+        }
+        while (currentNode != null) {
+            index = currentNode.getNext();
+            while (index != null) {
+                if (currentNode.getData() > index.getData()) {
+                    int temp = currentNode.getData();
+                    currentNode.setData(index.getData());
+                    index.setData(temp);
+                }
+                index = index.getNext();
+            }
+            currentNode = currentNode.getNext();
         }
     }
 }
