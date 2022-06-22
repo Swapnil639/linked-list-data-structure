@@ -15,7 +15,9 @@ public class LinkedListMain {
         System.out.println("Elements added in the list are:");
         linkedListFunctions.addFirst(56);
         linkedListFunctions.addLast(70);
-        linkedListFunctions.insertInBetween(56, 70, 30);;
+        linkedListFunctions.insertInBetween(56, 70, 30);
+        linkedListFunctions.printList();
+        linkedListFunctions.deleteFirst();
         linkedListFunctions.printList();
     }
 }
