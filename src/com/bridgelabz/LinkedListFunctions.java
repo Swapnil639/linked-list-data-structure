@@ -98,4 +98,14 @@ public class LinkedListFunctions {
             currentNode = currentNode.next;
         }
     }
+    public void deleteAnyNode(int data) {
+        Node currentNode = head, previousNode = head;
+        while (currentNode != null) {
+            if (currentNode.data == data) {
+                previousNode.next = currentNode.next;
+            }
+            previousNode = currentNode;
+            currentNode = currentNode.next;
+        }
+    }
 }

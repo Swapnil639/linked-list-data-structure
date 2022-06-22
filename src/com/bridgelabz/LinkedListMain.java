@@ -12,7 +12,7 @@ public class LinkedListMain {
         System.out.println("Simple Linked list is : " + list);
 
         LinkedListFunctions linkedListFunctions = new LinkedListFunctions();
-        System.out.println("Elements added in the list are:");
+        System.out.println("Linked list is :");
         linkedListFunctions.addFirst(56);
         linkedListFunctions.addLast(70);
         linkedListFunctions.printList();
@@ -24,6 +24,10 @@ public class LinkedListMain {
         System.out.println("Element 40 added after node 30 in the list");
         linkedListFunctions.appendingNode(30, 40);
         linkedListFunctions.printList();
+        System.out.println("Element 40 deleted from the list");
+        linkedListFunctions.deleteAnyNode(40);
+        linkedListFunctions.printList();
+
     }
 }
 
